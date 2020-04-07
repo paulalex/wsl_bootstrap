@@ -13,13 +13,13 @@ Bootstrap ubuntu 18.04 under WSL for development, the scripts should be ran as y
 * `Docker Compose 1.17`
 
 ## Bash Commandline Support
-* software-properties-common 
-* ca-certificates 
-* apt-transport-https 
-* jq 
-* tree 
-* rename
-* git-extras
+* `software-properties-common`
+* `ca-certificates`
+* `apt-transport-https`
+* `jq`
+* `tree`
+* `rename`
+* `git-extras`
 
 ## Shell Functions
 * `mcd()` - Make directory and enter it
