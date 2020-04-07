@@ -2,6 +2,10 @@
 
 set -ex
 
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3.8
+export VIRTUALENVWRAPPER_VIRTUALENV=~/.local/bin/virtualen
+export PATH=$HOME/.local/bin:$PATH
+
 echo "[INFO] Syncing dotfiles"
 source ./sync.sh
 
@@ -49,9 +53,6 @@ EOF
 
 echo "[INFO] Sourcing .bashrc"
 source ~/.bashrc
-
-export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3.8
-export VIRTUALENVWRAPPER_VIRTUALENV=~/.local/bin/virtualen
 
 # Install virtualenv wrapper
 echo "[INFO] Installing virtual env wrapper"
