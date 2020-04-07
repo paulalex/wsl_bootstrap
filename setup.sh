@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-cd ~
+bash ./sync.sh
 
 sudo apt update
 sudo apt upgrade -y
@@ -37,6 +37,7 @@ if type _git &> /dev/null; then
   complete -o default -o nospace -F _git g
 fi
 EOF
+
 source ~/.bashrc
  
 # Install virtualenv wrapper
@@ -70,7 +71,4 @@ serverless --version
 
  # Stop git asking for password every time you interact with remote
  git config --global credential.helper store
-
-
-
 
