@@ -17,7 +17,7 @@ alias lll="ls -latrhF"
 alias ln="ln -v"
 
 # Directory management
-alias reload='source .bashrc'
+alias reload='source ~/.bashrc'
 
 alias mkdir="mkdir -p"
 

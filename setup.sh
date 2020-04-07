@@ -2,7 +2,9 @@
 
 cd ~
 
-sudo apt install -y software-properties-common
+sudo apt update
+sudo apt upgrade -y
+sudo apt install -y software-properties-common ca-certificates jq tree rename
 sudo add-apt-repository ppa:deadsnakes/ppa
 sudo apt install python3.8
 python3.8 --version
