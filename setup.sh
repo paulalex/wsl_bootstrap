@@ -4,7 +4,7 @@ cd ~
 
 sudo apt update
 sudo apt upgrade -y
-sudo apt install -y software-properties-common ca-certificates apt-transport-https jq tree rename
+sudo apt install -y software-properties-common ca-certificates apt-transport-https jq tree rename git-extras
 sudo add-apt-repository ppa:deadsnakes/ppa
 sudo apt install python3.8
 python3.8 --version
@@ -67,6 +67,9 @@ serverless --version
  sudo chmod +x /usr/local/bin/docker-compose
  docker --version
  docker-compose --version
+
+ # Stop git asking for password every time you interact with remote
+ git config --global credential.helper store
 
 
 
