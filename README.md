@@ -44,7 +44,9 @@ Bootstrap ubuntu 18.04 under WSL for development, the scripts should be ran as y
 ## Git
 Additional configuration is performed for git, `git-extras` is installed and git is aliased as `g` and when used alone runs `git status`, when used in conjunction with any other valid `git` command will execute the command.
 
-Autocomplete is set up for `g` and your current checked out git branch is added to your terminal.
+Autocomplete is set up for `g` and your current checked out git branch is added to your terminal prompt, e.g:
+
+`wsl_bootstrap (master) $`
 
 The following aliases are installed for git:
 
