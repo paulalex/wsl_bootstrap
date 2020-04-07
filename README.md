@@ -76,7 +76,7 @@ To pull in new changes and 're-source' `.bashrc` you need only run the following
 `bash sync.sh`
 
 ## Important Note
-Currently the git config contains my name and email address so ensure that you change this:
+Currently the `.gitconfig` contains my name and email address so ensure that you change this:
 
 > [user]
 >  # Please adapt and uncomment the following lines:
