@@ -4,7 +4,7 @@ cd ~
 
 sudo apt update
 sudo apt upgrade -y
-sudo apt install -y software-properties-common ca-certificates jq tree rename
+sudo apt install -y software-properties-common ca-certificates apt-transport-https jq tree rename
 sudo add-apt-repository ppa:deadsnakes/ppa
 sudo apt install python3.8
 python3.8 --version
@@ -57,3 +57,17 @@ ln -s ~/.tfenv/bin/* ~/.local/bin
 # Install serverless framework using NPM
 sudo npm install -g serverless
 serverless --version
+
+# Install docker and docker-compose
+ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+ sudo add-apt-repository  "deb [arch=amd64] https://download.docker.com/linux/ubuntu  $(lsb_release -cs) stable"
+ sudo apt-get -y install docker-ce
+ sudo usermod -aG docker ${USER}
+ sudo curl -L https://github.com/docker/compose/releases/download/1.17.0/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
+ sudo chmod +x /usr/local/bin/docker-compose
+ docker --version
+ docker-compose --version
+
+
+
+
