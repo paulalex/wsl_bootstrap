@@ -1,0 +1,50 @@
+[INFO] Syncing dotfiles
+Already up to date.
+sending incremental file list
+./
+.gitconfig
+test.txt
+
+sent 715 bytes  received 57 bytes  1.54K bytes/sec
+total size is 6.93K  speedup is 8.98
+[INFO] Installation Complete, Confirm Installed Versions
+[INFO] Installed Python Version Python 3.8.2
+[INFO] AWS CLI Version aws-cli/1.18.37 Python/3.8.2 Linux/4.4.0-17763-Microsoft botocore/1.15.37
+[INFO] Tfenv Version tfenv 2.0.0-beta2-1-g45a8ad7
+[INFO] Serverless Version Framework Core: 1.67.0
+Plugin: 3.6.5
+SDK: 2.3.0
+Components: 2.28.0
+[INFO] Docker Version Docker version 19.03.8, build afacb8b7f0
+[INFO] Docker Compose Version docker-compose version 1.17.0, build ac53b73
+[INFO] Git Aliases Version c = commit
+co = checkout
+ga = add -A
+gi = init
+hist = log --all --graph --decorate --oneline
+no = show --name-only
+p = push
+st = status
+[INFO] Bash Aliase Version alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+alias bk='cd -'
+alias devhome='cd /mnt/c/Users/Ockle1P/dev/git_repos'
+alias editbash='vi ~/.bashrc'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias files='du -hs * | sort -rh'
+alias g='g'
+alias grep='grep --color=auto'
+alias l='ls -CF'
+alias la='ls -A'
+alias ll='ls -al'
+alias lll='ls -latrhF'
+alias ln='ln -v'
+alias ls='ls --color=auto'
+alias mkdir='mkdir -p'
+alias path='echo $PATH | tr -s ":" "\n"'
+alias python='python3.8'
+alias reload='source ~/.bashrc'
+alias ~='cd ~'s

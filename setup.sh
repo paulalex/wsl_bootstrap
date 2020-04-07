@@ -1,14 +1,5 @@
 #!/usr/bin/env bash
 
-set -ex
-
-export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3.8
-export VIRTUALENVWRAPPER_VIRTUALENV=~/.local/bin/virtualen
-export PATH=$HOME/.local/bin:$PATH
-
-echo "[INFO] Syncing dotfiles"
-source ./sync.sh
-
 # Update repos and upgrade ubuntu
 echo "[INFO] Upgrading and updating apt"
 sudo apt update
@@ -51,7 +42,18 @@ if type _git &> /dev/null; then
 fi
 EOF
 
-echo "[INFO] Sourcing .bashrc"
+echo "[INFO] Syncing dotfiles"
+ # Sync files to home directory
+  rsync --exclude ".git/" \
+    --exclude ".gitignore" \
+    --exclude ".DS_Store" \
+    --exclude ".osx" \
+    --exclude "dotfiles.sh" \
+    --exclude "README.md" \
+    --exclude "LICENSE-MIT.txt" \
+    -avh --no-perms . ~
+
+# echo "[INFO] Sourcing .bashrc"
 source ~/.bashrc
 
 # Install virtualenv wrapper
@@ -89,27 +91,16 @@ sudo chmod +x /usr/local/bin/docker-compose
 # Confirmation of installations
 echo "[INFO] Installation Complete, Confirm Installed Versions"
 
-echo "[INFO] Python"
-python3.8 --version
+echo "[INFO] Installed Python Version $(python3.8 --version)"
 
-echo "[INFO] AWS"
-aws --version
+echo "[INFO] Installed AWS CLI Version $(aws --version)"
 
-echo "[INFO] Tfenv"
-tfenv --version
+echo "[INFO] Installed Tfenv Version $(tfenv --version)"
 
-echo "[INFO] Serverless"
-serverless --version
+echo -e "[INFO] Installed Serverless Version \n$(serverless --version)"
 
-echo "[INFO] Docker"
-docker --version
+echo "[INFO] Installed Docker Version $(docker --version)"
 
-echo "[INFO] Docker Compose"
-docker-compose --version
+echo "[INFO] Installed Docker Compose Version $(docker-compose --version)"
 
-echo "[INFO] Git Aliases"
-git-alias
-
-echo "[INFO] Bash Aliases"
-alias
 
