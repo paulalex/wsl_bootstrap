@@ -25,3 +25,5 @@ alias mkdir="mkdir -p"
 alias files="du -hs * | sort -rh"
 
 alias path='echo $PATH | tr -s ":" "\n"'
+
+alias editbash="vi ~/.bashrc"
