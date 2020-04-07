@@ -1,7 +1,62 @@
 # wsl_bootstrap
 Bootstrap ubuntu 18.04 under WSL for development, the scripts should be ran as your normal user and ***not as root!***
 
-## Usage
+# What is installed?
+
+## Development software
+* `python 3.8`
+* `Node 12.x`
+* `NPM 6`
+* `Tfenv`
+* `Serverless`
+* `Docker 19.3`
+* `Docker Compose 1.17`
+
+## Bash Commandline Support
+* software-properties-common 
+* ca-certificates 
+* apt-transport-https 
+* jq 
+* tree 
+* rename
+* git-extras
+
+## Shell Functions
+* `mcd()` - Make directory and enter it
+* `envup()` - Load a `.env` file into your shell session
+* `extract()` - Handle most common compression file extractions
+
+## Aliases
+* `alias python="python3.8"`
+* `alias ..="cd .."`
+* `alias ...="cd ../.."`
+* `alias ....="cd ../../.."`
+* `alias ~="cd ~"`
+* `alias bk="cd -"`
+* `alias ll="ls -al"`
+* `alias lll="ls -latrhF"`
+* `alias ln="ln -v"`
+* `alias reload="source ~/.bashrc"`
+* `alias mkdir="mkdir -p"`
+* `alias files="du -hs * | sort -rh"`
+* `alias path='echo $PATH | tr -s ":" "\n"'`
+
+## Git
+Additional configuration is performed for git, `git-extras` is installed and git is aliased as `g` and when used alone runs `git status`, when used in conjunction with any other valid `git` command will execute the command.
+
+Autocomplete is set up for `g` and your current checked out git branch is added to your terminal.
+
+The following aliases are installed for git:
+
+* `g` 
+* `hist = log --all --graph --decorate --oneline`
+* `co = checkout`
+* `no = show --name-only`
+* `st = status`
+* `gi = init`
+* `ga = add -A`
+* `c = commit`
+* `p = push`
 
 ### Initial installation
     

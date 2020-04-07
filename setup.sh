@@ -38,9 +38,6 @@ shopt -s nocaseglob
 # Append to the Bash history file, rather than overwriting it
 shopt -s histappend
 
-# Autocorrect typos in path names when using `cd`
-shopt -s cdspell
-
 # Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards
 [ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2- | tr ' ' '\n')" scp sftp ssh
 
@@ -68,7 +65,7 @@ python3.8 -m pip install awscli boto3
 # Install Node and NPM
 echo "[INFO] Installing node v12 and npm"
 sudo curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
-sudo apt install nodejs
+sudo apt install -y nodejs
 
 # Install tfenv
 echo "[INFO] Installing tfenv"
