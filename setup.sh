@@ -6,7 +6,7 @@ sudo apt update
 sudo apt upgrade -y
 sudo apt install -y software-properties-common ca-certificates apt-transport-https jq tree rename git-extras
 sudo add-apt-repository ppa:deadsnakes/ppa
-sudo apt install python3.8
+sudo apt install -y python3.8
 python3.8 --version
 
 # output to .bashrc
