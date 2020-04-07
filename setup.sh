@@ -56,6 +56,9 @@ echo "[INFO] Syncing dotfiles"
 # echo "[INFO] Sourcing .bashrc"
 source ~/.bashrc
 
+# Stop git asking for password every time you interact with remote
+ git config --global credential.helper store
+
 # Install virtualenv wrapper
 echo "[INFO] Installing virtual env wrapper"
 python3.8 -m pip install virtualenvwrapper
