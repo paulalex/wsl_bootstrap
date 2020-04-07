@@ -17,4 +17,5 @@ Currently the git config contains my name and email address so ensure that you c
 > [user]
 >  # Please adapt and uncomment the following lines:
 >  name = Paul Ockleford
+>
 >  email = paul.ockleford@edfenergy.com
