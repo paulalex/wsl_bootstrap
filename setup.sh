@@ -68,6 +68,7 @@ python3.8 -m pip install awscli boto3
 # Install Node and NPM
 echo "[INFO] Installing node v12 and npm"
 sudo curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+sudo apt install nodejs
 
 # Install tfenv
 echo "[INFO] Installing tfenv"
