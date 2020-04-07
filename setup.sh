@@ -1,5 +1,7 @@
 #!/usr/bin/bash
 
+set -ex
+
 echo "[INFO] Syncing dotfiles"
 bash ./sync.sh
 
@@ -15,7 +17,7 @@ sudo apt install -y software-properties-common ca-certificates apt-transport-htt
 # Install python 3.8 from deadsnakes repo
 echo "[INFO] Installing python 3.8"
 sudo add-apt-repository -y ppa:deadsnakes/ppa
-sudo apt install -y python3.8
+sudo apt install -y python3.8 python3-pip
 
 # output to .bashrc
 echo "[INFO] Updating .bashrc"
@@ -48,9 +50,6 @@ if type _git &> /dev/null; then
 fi
 EOF
 
-echo "[INFO] Sourcing .bashrc"
-source ~/.bashrc
-
 # Install virtualenv wrapper
 echo "[INFO] Installing virtual env wrapper"
 python3.8 -m pip install virtualenvwrapper
@@ -59,7 +58,6 @@ source ~/.local/bin/virtualenvwrapper.sh
 # Install awscli and boto3
 echo "[INFO] Installing awscli and boto3"
 python3.8 -m pip install awscli boto3
-python3.8 -c 'import awscli; print(awscli)'
 
 # Install Node and NPM
 echo "[INFO] Installing node v12 and npm"
@@ -76,19 +74,21 @@ sudo npm install -g serverless
 
 # Install docker and docker-compose
 echo "[INFO] Installing docker and docker compose"
- curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
- sudo add-apt-repository  "deb [arch=amd64] https://download.docker.com/linux/ubuntu  $(lsb_release -cs) stable"
- sudo apt-get -y install docker-ce
- sudo usermod -aG docker ${USER}
- sudo curl -L https://github.com/docker/compose/releases/download/1.17.0/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
- sudo chmod +x /usr/local/bin/docker-compose
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo add-apt-repository  "deb [arch=amd64] https://download.docker.com/linux/ubuntu  $(lsb_release -cs) stable"
+sudo apt-get -y install docker-ce
+sudo usermod -aG docker ${USER}
+sudo curl -L https://github.com/docker/compose/releases/download/1.17.0/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
  
+echo "[INFO] Sourcing .bashrc"
+source ~/.bashrc
 
 # Confirmation of installations
 echo "[INFO] Installation Complete, Confirm Installed Versions"
 
 echo "[INFO] Python"
-python --version
+python3.8 --version
 
 echo "[INFO] AWS"
 aws --version
