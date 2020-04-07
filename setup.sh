@@ -26,7 +26,7 @@ cat <<EOF >> ~/.bashrc
 alias python="python3.8"
 
 # Execute source on all of the dotfiles
-for file in ~/.{aliases,git_functions,k8s_functions,shell_functions,environment}; do
+for file in ~/.{aliases,git_functions,shell_functions,environment}; do
   [ -r "${file}" ] && [ -f "${file}" ] && source "${file}"
 done
 
