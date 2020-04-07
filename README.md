@@ -2,6 +2,7 @@
 Bootstrap ubuntu 18.04 under WSL for development, the scripts should be ran as your normal user and ***not as root!***
 
 # What is installed?
+Below you will find a list of all the software, aliases and bash commandline tools that are installed when you run `setup.sh`, running `sync.sh` will only bring in new changes from git and then resource `.bashrc` so that your shell is updated with any new environment variables and aliases etc.
 
 ## Development software
 * `python 3.8`
@@ -50,7 +51,6 @@ Autocomplete is set up for `g` and your current checked out git branch is added 
 
 The following aliases are installed for git:
 
-* `g` 
 * `hist = log --all --graph --decorate --oneline`
 * `co = checkout`
 * `no = show --name-only`
