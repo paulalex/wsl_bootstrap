@@ -10,3 +10,4 @@
   gi = init
   ga = add -A
   c = commit
+  p = push
