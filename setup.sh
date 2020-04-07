@@ -53,13 +53,13 @@ source ~/.bashrc
 
 # Install virtualenv wrapper
 echo "[INFO] Installing virtual env wrapper"
-python -m pip install virtualenvwrapper
+python3.8 -m pip install virtualenvwrapper
 source ~/.local/bin/virtualenvwrapper.sh
 
 # Install awscli and boto3
 echo "[INFO] Installing awscli and boto3"
-python -m pip install awscli boto3
-python -c 'import awscli; print(awscli)'
+python3.8 -m pip install awscli boto3
+python3.8 -c 'import awscli; print(awscli)'
 
 # Install Node and NPM
 echo "[INFO] Installing node v12 and npm"
