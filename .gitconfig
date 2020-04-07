@@ -1,0 +1,10 @@
+[user]
+# Please adapt and uncomment the following lines:
+  name = Paul Ockleford
+  email = paul.ockleford@edfenergy.com
+[alias]
+  hist = log --all --graph --decorate --oneline
+  co = checkout
+  no = show --name-only
+  st = status
+  gi = init

@@ -1,0 +1,12 @@
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3.8
+export VIRTUALENVWRAPPER_VIRTUALENV=~/.local/bin/virtualenv
+export WORKON_HOME=~/.virtualenvs
+
+# Configure command prompt
+export PS1="\W\[\033[37m\]\$(parse_git_branch)\[\033[00m\] $ "
+
+# Export workon_home for virtualenvwrapper
+export WORKON_HOME=~/.virtualenvs
+
+export PATH=$HOME/.local/bin:$PATH
+

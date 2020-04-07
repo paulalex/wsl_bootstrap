@@ -1,0 +1,27 @@
+# Navigation
+alias ..="cd .."
+
+alias ...="cd ../.."
+
+alias ....="cd ../../.."
+
+alias ~="cd ~"
+
+alias bk="cd -"
+
+# Listing
+alias ll="ls -al"
+
+alias lll="ls -latrhF"
+
+alias ln="ln -v"
+
+# Directory management
+alias reload='source .bashrc'
+
+alias mkdir="mkdir -p"
+
+# List all files in directory ordered by size descending
+alias files="du -hs * | sort -rh"
+
+alias path='echo $PATH | tr -s ":" "\n"'
