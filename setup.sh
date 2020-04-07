@@ -16,7 +16,6 @@ sudo apt install -y software-properties-common ca-certificates apt-transport-htt
 echo "[INFO] Installing python 3.8"
 sudo add-apt-repository -y ppa:deadsnakes/ppa
 sudo apt install -y python3.8
-python3.8 --version
 
 # output to .bashrc
 echo "[INFO] Updating .bashrc"
@@ -74,7 +73,6 @@ ln -s ~/.tfenv/bin/* ~/.local/bin
 # Install serverless framework using NPM
 echo "[INFO] Installing serverless framework"
 sudo npm install -g serverless
-serverless --version
 
 # Install docker and docker-compose
 echo "[INFO] Installing docker and docker compose"
@@ -84,6 +82,32 @@ echo "[INFO] Installing docker and docker compose"
  sudo usermod -aG docker ${USER}
  sudo curl -L https://github.com/docker/compose/releases/download/1.17.0/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
  sudo chmod +x /usr/local/bin/docker-compose
- docker --version
- docker-compose --version
+ 
+
+# Confirmation of installations
+echo "[INFO] Installation Complete, Confirm Installed Versions"
+
+echo "[INFO] Python"
+python --version
+
+echo "[INFO] AWS"
+aws --version
+
+echo "[INFO] Tfenv"
+tfenv --version
+
+echo "[INFO] Serverless"
+serverless --version
+
+echo "[INFO] Docker"
+docker --version
+
+echo "[INFO] Docker Compose"
+docker-compose --version
+
+echo "[INFO] Git Aliases"
+git-alias
+
+echo "[INFO] Bash Aliases"
+alias
 
