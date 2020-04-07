@@ -7,7 +7,6 @@ function sync() {
 		--exclude ".DS_Store" \
 		--exclude ".osx" \
 		--exclude "dotfiles.sh" \
-		-exclude "brew.sh" \
 		--exclude "README.md" \
 		--exclude "LICENSE-MIT.txt" \
 		-avh --no-perms . ~
