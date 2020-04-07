@@ -12,7 +12,7 @@ function sync() {
 		--exclude "LICENSE-MIT.txt" \
 		-avh --no-perms . ~
 
-	source ~/.bash_profile
+	source ~/.bashrc
 }
 
 git pull origin master
