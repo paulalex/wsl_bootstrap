@@ -69,6 +69,3 @@ serverless --version
  docker --version
  docker-compose --version
 
- # Stop git asking for password every time you interact with remote
- git config --global credential.helper store
-

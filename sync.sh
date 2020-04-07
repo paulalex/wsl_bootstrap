@@ -18,3 +18,6 @@ git pull origin master
 sync
 unset -f sync
 
+ # Stop git asking for password every time you interact with remote
+ git config --global credential.helper store
+
