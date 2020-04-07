@@ -50,6 +50,9 @@ if type _git &> /dev/null; then
 fi
 EOF
 
+echo "[INFO] Sourcing .bashrc"
+source ~/.bashrc
+
 # Install virtualenv wrapper
 echo "[INFO] Installing virtual env wrapper"
 python3.8 -m pip install virtualenvwrapper
@@ -81,9 +84,6 @@ sudo usermod -aG docker ${USER}
 sudo curl -L https://github.com/docker/compose/releases/download/1.17.0/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
  
-echo "[INFO] Sourcing .bashrc"
-source ~/.bashrc
-
 # Confirmation of installations
 echo "[INFO] Installation Complete, Confirm Installed Versions"
 
