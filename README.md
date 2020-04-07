@@ -14,7 +14,7 @@ Bootstrap ubuntu 18.04 under WSL for development, the scripts should be ran as y
 `bash setup.sh`
 
 ### Update and resync
-To pull in new changes and resource `.bashrc` you need only run the following command (do not run )
+To pull in new changes and 're-source' `.bashrc` you need only run the following command (do not run )
 
 `bash sync.sh`
 
