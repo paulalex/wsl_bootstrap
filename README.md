@@ -2,6 +2,8 @@
 Bootstrap ubuntu 18.04 under WSL for development
 
 ## Usage
+
+### Initial installation
     
 ##### Clone Repository
 
@@ -10,6 +12,10 @@ Bootstrap ubuntu 18.04 under WSL for development
 ##### Bootstrap WSL
 
 `bash setup.sh`
+
+### Update and resync
+
+`bash sync.sh`
 
 ## Important Note
 Currently the git config contains my name and email address so ensure that you change this:
