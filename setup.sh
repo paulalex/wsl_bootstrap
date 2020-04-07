@@ -3,7 +3,7 @@
 set -ex
 
 echo "[INFO] Syncing dotfiles"
-bash ./sync.sh
+source ./sync.sh
 
 # Update repos and upgrade ubuntu
 echo "[INFO] Upgrading and updating apt"

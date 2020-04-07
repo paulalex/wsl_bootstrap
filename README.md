@@ -68,12 +68,12 @@ The following aliases are installed for git:
 
 ##### Bootstrap WSL
 
-`bash setup.sh`
+`source setup.sh`
 
 ### Update and resync
 To pull in new changes and 're-source' `.bashrc` you need only run the following command (do not run `setup.sh` again):
 
-`bash sync.sh`
+`source sync.sh`
 
 ## Important Note
 Currently the `.gitconfig` contains my name and email address so ensure that you change this:
