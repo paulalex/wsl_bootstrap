@@ -3,8 +3,9 @@ Bootstrap ubuntu 18.04 under WSL for development
 
 ## Usage
     
-* Clone Repository
+##### Clone Repository
+
   `git clone https://github.com/paulalex/wsl_bootstrap.git`
 
-* Bootstrap WSL
+##### Bootstrap WSL
 `bash setup.sh`
