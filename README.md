@@ -1,5 +1,5 @@
 # wsl_bootstrap
-Bootstrap ubuntu 18.04 under WSL for development
+Bootstrap ubuntu 18.04 under WSL for development, the scripts should be ran as your normal user and ***not as root!***
 
 ## Usage
 
@@ -14,6 +14,7 @@ Bootstrap ubuntu 18.04 under WSL for development
 `bash setup.sh`
 
 ### Update and resync
+To pull in new changes and resource `.bashrc` you need only run the following command (do not run )
 
 `bash sync.sh`
 
