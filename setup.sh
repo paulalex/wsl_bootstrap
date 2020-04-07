@@ -21,7 +21,7 @@ python3.8 --version
 # output to .bashrc
 echo "[INFO] Updating .bashrc"
 
-cat <<EOF > ~/.bashrc
+cat <<EOF >> ~/.bashrc
 alias python="python3.8"
 
 # Execute source on all of the dotfiles
