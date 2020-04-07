@@ -53,6 +53,9 @@ EOF
 echo "[INFO] Sourcing .bashrc"
 source ~/.bashrc
 
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3.8
+export VIRTUALENVWRAPPER_VIRTUALENV=~/.local/bin/virtualen
+
 # Install virtualenv wrapper
 echo "[INFO] Installing virtual env wrapper"
 python3.8 -m pip install virtualenvwrapper
