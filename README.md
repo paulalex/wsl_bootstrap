@@ -1,6 +1,30 @@
 # wsl_bootstrap
 Bootstrap ubuntu 18.04 under WSL for development, the scripts should be ran as your normal user and ***not as root!***
 
+### Initial installation
+    
+##### Clone Repository
+
+  `git clone https://github.com/paulalex/wsl_bootstrap.git`
+
+##### Bootstrap WSL
+
+`source setup.sh`
+
+### Update and resync
+To pull in new changes and 're-source' `.bashrc` you need only run the following command (do not run `setup.sh` again):
+
+`source sync.sh`
+
+## Important Note
+Currently the `.gitconfig` contains my name and email address so ensure that you change this:
+
+> [user]
+>  # Please adapt and uncomment the following lines:
+>  name = Paul Ockleford
+>
+>  email = paul.ockleford@edfenergy.com
+
 # What is installed?
 Below you will find a list of all the software, aliases and bash commandline tools that are installed when you run `setup.sh`, running `sync.sh` will only bring in new changes from git and then resource `.bashrc` so that your shell is updated with any new environment variables and aliases etc.
 
@@ -59,27 +83,3 @@ The following aliases are installed for git:
 * `ga = add -A`
 * `c = commit`
 * `p = push`
-
-### Initial installation
-    
-##### Clone Repository
-
-  `git clone https://github.com/paulalex/wsl_bootstrap.git`
-
-##### Bootstrap WSL
-
-`source setup.sh`
-
-### Update and resync
-To pull in new changes and 're-source' `.bashrc` you need only run the following command (do not run `setup.sh` again):
-
-`source sync.sh`
-
-## Important Note
-Currently the `.gitconfig` contains my name and email address so ensure that you change this:
-
-> [user]
->  # Please adapt and uncomment the following lines:
->  name = Paul Ockleford
->
->  email = paul.ockleford@edfenergy.com
