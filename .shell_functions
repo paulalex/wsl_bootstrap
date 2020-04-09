@@ -13,6 +13,14 @@ function mcd() {
   mkdir -p "$1" && cd "$1";
 }
 
+function pipreq() {
+  python -m pip install -r "$1"
+}
+
+function pipinst() {
+  python -m pip install "$1"
+}
+
 # Extract common files types
 function extract {
  if [ -z "$1" ]; then

@@ -46,11 +46,9 @@ echo "[INFO] Syncing dotfiles"
  # Sync files to home directory
   rsync --exclude ".git/" \
     --exclude ".gitignore" \
-    --exclude ".DS_Store" \
-    --exclude ".osx" \
-    --exclude "dotfiles.sh" \
+    --exclude "setup.sh" \
+     --exclude "sync.sh" \
     --exclude "README.md" \
-    --exclude "LICENSE-MIT.txt" \
     -avh --no-perms . ~
 
 # echo "[INFO] Sourcing .bashrc"

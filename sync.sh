@@ -4,12 +4,8 @@ function sync() {
   # Sync files to home directory
 	rsync --exclude ".git/" \
 	  --exclude ".gitignore" \
-		--exclude ".DS_Store" \
-		--exclude ".osx" \
 		--exclude "setup.sh" \
 		--exclude "sync.sh" \
-		--exclude "README.md" \
-		--exclude "LICENSE-MIT.txt" \
 		-avh --no-perms . ~
 
 	source ~/.bashrc
