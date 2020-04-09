@@ -6,7 +6,8 @@ function sync() {
 	  --exclude ".gitignore" \
 		--exclude ".DS_Store" \
 		--exclude ".osx" \
-		--exclude "dotfiles.sh" \
+		--exclude "setup.sh" \
+		--exclude "sync.sh" \
 		--exclude "README.md" \
 		--exclude "LICENSE-MIT.txt" \
 		-avh --no-perms . ~
