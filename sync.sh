@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
 function sync() {
-  # Sync files to home directory
+  	# Sync files to home directory
 	rsync --exclude ".git/" \
-	  --exclude ".gitignore" \
+		--exclude ".gitignore" \
 		--exclude "setup.sh" \
 		--exclude "sync.sh" \
 		-avh --no-perms . ~
