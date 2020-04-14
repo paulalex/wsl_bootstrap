@@ -6,6 +6,7 @@ function sync() {
 		--exclude ".gitignore" \
 		--exclude "setup.sh" \
 		--exclude "sync.sh" \
+		--exclude "README.md" \
 		-avh --no-perms . ~
 
 	source ~/.bashrc
