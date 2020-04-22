@@ -20,6 +20,8 @@ echo "[INFO] Updating .bashrc"
 cat <<'EOF' >> ~/.bashrc
 alias python="python3.8"
 
+source ~/.local/bin/virtualenvwrapper.sh
+
 # Execute source on all of the dotfiles
 for file in ~/.{aliases,git_functions,shell_functions,environment}; do
   [ -r "${file}" ] && [ -f "${file}" ] && source "${file}"
@@ -42,6 +44,10 @@ if type _git &> /dev/null; then
 fi
 EOF
 
+# Install virtualenv wrapper
+echo "[INFO] Installing virtual env wrapper"
+python3.8 -m pip install virtualenvwrapper
+
 echo "[INFO] Syncing dotfiles"
  # Sync files to home directory
   rsync --exclude ".git/" \
@@ -56,11 +62,6 @@ source ~/.bashrc
 
 # Stop git asking for password every time you interact with remote
  git config --global credential.helper store
-
-# Install virtualenv wrapper
-echo "[INFO] Installing virtual env wrapper"
-python3.8 -m pip install virtualenvwrapper
-source ~/.local/bin/virtualenvwrapper.sh
 
 # Install awscli and boto3
 echo "[INFO] Installing awscli and boto3"
