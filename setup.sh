@@ -7,7 +7,7 @@ sudo apt upgrade -y
 
 # Install useful and necessary commandline tools
 echo "[INFO] Installing commandline tools [software-properties-common, ca-certificates, apt-transport-https, jq, tree, rename, git-extras]"
-sudo apt install -y software-properties-common ca-certificates apt-transport-https jq tree rename git-extras
+sudo apt install -y software-properties-common ca-certificates apt-transport-https jq tree rename git-extras python-dev
 
 # Install python 3.8 from deadsnakes repo
 echo "[INFO] Installing python 3.8"
