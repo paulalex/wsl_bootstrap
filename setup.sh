@@ -6,19 +6,25 @@ sudo apt update
 sudo apt upgrade -y
 
 # Install useful and necessary commandline tools
-echo "[INFO] Installing commandline tools [software-properties-common, ca-certificates, apt-transport-https, jq, tree, rename, git-extras]"
-sudo apt install -y software-properties-common ca-certificates apt-transport-https jq tree rename git-extras python3.8-dev
+echo "[INFO] Installing commandline tools [software-properties-common, ca-certificates, apt-transport-https, jq, tree, rename, git-extras, python3.8-dev, unzip]"
+sudo apt install -y software-properties-common ca-certificates apt-transport-https jq tree rename git-extras python3.8-dev unzip
 
 # Install python 3.8 from deadsnakes repo
 echo "[INFO] Installing python 3.8"
 sudo add-apt-repository -y ppa:deadsnakes/ppa
 sudo apt install -y python3.8 python3-pip
 
+# Install virtualenv wrapper
+echo "[INFO] Installing virtual env wrapper"
+python3.8 -m pip install virtualenvwrapper
+
 # output to .bashrc
 echo "[INFO] Updating .bashrc"
 
 cat <<'EOF' >> ~/.bashrc
 alias python="python3.8"
+alias editbash="vi ~/.bashrc"
+source ~/.local/bin/virtualenvwrapper.sh
 
 source ~/.local/bin/virtualenvwrapper.sh
 
