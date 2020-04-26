@@ -44,6 +44,8 @@ Below you will find a list of all the software, aliases and bash commandline too
 * `tree`
 * `rename`
 * `git-extras`
+* `python3.8-dev` 
+* `unzip`
 
 ## Shell Functions
 * `mcd()` - Make directory and enter it
