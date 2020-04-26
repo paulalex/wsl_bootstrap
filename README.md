@@ -37,6 +37,7 @@ Below you will find a list of all the software, aliases and bash commandline too
 * `Docker Compose 1.17`
 
 ## Bash Commandline Support
+* `aws-cli`
 * `software-properties-common`
 * `ca-certificates`
 * `apt-transport-https`
