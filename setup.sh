@@ -4,6 +4,7 @@
 echo "[INFO] Upgrading and updating apt"
 sudo apt update
 sudo apt upgrade -y
+sudo ulimit -n 50000
 
 # Install useful and necessary commandline tools
 echo "[INFO] Installing commandline tools [software-properties-common, ca-certificates, apt-transport-https, jq, tree, rename, git-extras, python3.8-dev, unzip]"
