@@ -25,7 +25,6 @@ echo "[INFO] Updating .bashrc"
 cat <<'EOF' >> ~/.bashrc
 alias python="python3.8"
 alias editbash="vi ~/.bashrc"
-source ~/.local/bin/virtualenvwrapper.sh
 
 source ~/.local/bin/virtualenvwrapper.sh
 
@@ -54,6 +53,9 @@ EOF
 # Install virtualenv wrapper
 echo "[INFO] Installing virtual env wrapper"
 python3.8 -m pip install virtualenvwrapper
+
+echo "[INFO] Installing awsume"
+python3.8 -m pip install awsume
 
 echo "[INFO] Syncing dotfiles"
  # Sync files to home directory
