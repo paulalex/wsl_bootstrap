@@ -88,10 +88,6 @@ echo "[INFO] Installing tfenv"
 git clone https://github.com/tfutils/tfenv.git ~/.tfenv
 ln -s ~/.tfenv/bin/* ~/.local/bin
 
-# Install serverless framework using NPM
-echo "[INFO] Installing serverless framework"
-sudo npm install -g serverless
-
 # Install docker and docker-compose
 echo "[INFO] Installing docker and docker compose"
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
@@ -100,7 +96,15 @@ sudo apt-get -y install docker-ce
 sudo usermod -aG docker ${USER}
 sudo curl -L https://github.com/docker/compose/releases/download/1.17.0/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
- 
+
+# Install serverless framework using NPM, I have added a temporary
+# workaround (aka a hack) because it seems we cannot install without
+# using sudo but in doing so the ~/.config directory is then owned by root
+# and so things like serverless will not run
+echo "[INFO] Installing serverless framework"
+sudo npm install -g serverless
+sudo chown -R $USER:$(id -gn $USER) ~/.config
+
 # Confirmation of installations
 echo "[INFO] Installation Complete, Confirm Installed Versions"
 
