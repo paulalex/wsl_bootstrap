@@ -20,13 +20,11 @@ echo "[INFO] Installing virtual env wrapper"
 python3.8 -m pip install virtualenvwrapper
 
 # output to .bashrc
-echo "[INFO] Updating .bashrc"
+echo "[INFO] Sending Snippet to .bashrc"
 
 cat <<'EOF' >> ~/.bashrc
 alias python="python3.8"
 alias editbash="vi ~/.bashrc"
-
-source ~/.local/bin/virtualenvwrapper.sh
 
 # Execute source on all of the dotfiles
 for file in ~/.{aliases,git_functions,shell_functions,environment}; do
@@ -34,6 +32,9 @@ for file in ~/.{aliases,git_functions,shell_functions,environment}; do
 done
 
 unset file
+
+# Sourcing virtual env wrapper
+source ~/.local/bin/virtualenvwrapper.sh
 
 # Case-insensitive globbing (used in pathname expansion)
 shopt -s nocaseglob
@@ -66,11 +67,12 @@ echo "[INFO] Syncing dotfiles"
     --exclude "README.md" \
     -avh --no-perms . ~
 
-# echo "[INFO] Sourcing .bashrc"
+echo "[INFO] Sourcing .bashrc"
 source ~/.bashrc
 
 # Stop git asking for password every time you interact with remote
- git config --global credential.helper store
+echo "[INFO] Amending git config credential helper"
+git config --global credential.helper store
 
 # Install awscli and boto3
 echo "[INFO] Installing awscli and boto3"
