@@ -49,6 +49,12 @@ shopt -s histappend
 if type _git &> /dev/null; then
   complete -o default -o nospace -F _git g
 fi
+
+# Install serverless framework using NPM, I have added a temporary
+# workaround (aka a hack) because it seems we cannot install without
+# using sudo but in doing so the ~/.config directory is then owned by root
+# and so things like serverless will not run
+sudo chown -R $USER:$(id -gn $USER) ~/.config
 EOF
 
 # Install virtualenv wrapper
@@ -57,18 +63,6 @@ python3.8 -m pip install virtualenvwrapper
 
 echo "[INFO] Installing awsume"
 python3.8 -m pip install awsume
-
-echo "[INFO] Syncing dotfiles"
- # Sync files to home directory
-  rsync --exclude ".git/" \
-    --exclude ".gitignore" \
-    --exclude "setup.sh" \
-     --exclude "sync.sh" \
-    --exclude "README.md" \
-    -avh --no-perms . ~
-
-echo "[INFO] Sourcing .bashrc"
-source ~/.bashrc
 
 # Stop git asking for password every time you interact with remote
 echo "[INFO] Amending git config credential helper"
@@ -97,13 +91,19 @@ sudo usermod -aG docker ${USER}
 sudo curl -L https://github.com/docker/compose/releases/download/1.17.0/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
 
-# Install serverless framework using NPM, I have added a temporary
-# workaround (aka a hack) because it seems we cannot install without
-# using sudo but in doing so the ~/.config directory is then owned by root
-# and so things like serverless will not run
 echo "[INFO] Installing serverless framework"
 sudo npm install -g serverless
-sudo chown -R $USER:$(id -gn $USER) ~/.config
+
+echo "[INFO] Syncing dotfiles to ${HOME}"
+  rsync --exclude ".git/" \
+    --exclude ".gitignore" \
+    --exclude "setup.sh" \
+     --exclude "sync.sh" \
+    --exclude "README.md" \
+    -avh --no-perms . ~
+
+echo "[INFO] Sourcing ${HOME}/.bashrc"
+source ~/.bashrc
 
 # Confirmation of installations
 echo "[INFO] Installation Complete, Confirm Installed Versions"
