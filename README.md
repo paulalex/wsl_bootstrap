@@ -1,6 +1,6 @@
 # Bootstrap Ubuntu 18.04
 
-Bootstrap ubuntu 18.04 under WSL for development, the scripts should be ran as your normal user and ***not as root!***
+Bootstrap ubuntu 18.04 under WSL for development, these scripts should run as your normal user and ***not as root!***
 
 It is also recommended that you set up your user for passwordless sudo using the `visudo` tool so that you do not need to enter your password to run sudo
 when the installation script is executing.
