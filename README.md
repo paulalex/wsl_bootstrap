@@ -1,36 +1,41 @@
 # wsl_bootstrap
+
 Bootstrap ubuntu 18.04 under WSL for development, the scripts should be ran as your normal user and ***not as root!***
 
 It is also recommended that you set up your user for passwordless sudo using the `visudo` tool so that you do not need to enter your password to run sudo
 when the installation script is executing.
 
 ## Initial installation
-    
-#### Clone Repository
+
+### Clone Repository
 
   `git clone https://github.com/paulalex/wsl_bootstrap.git`
 
-#### Bootstrap WSL
+### Bootstrap WSL
 
 `source setup.sh`
 
 ## Update and resync
+
 To pull in new changes and 're-source' `.bashrc` you need only run the following command (do not run `setup.sh` again):
 
 `source sync.sh`
 
-## Important Note
+## ***Important Note***
+
 Currently the `.gitconfig` contains my name and email address so ensure that you change this:
 
 > [user]
->  name = Paul Ockleford
+> name = Paul Ockleford
 >
->  email = paul.ockleford@edfenergy.com
+> email = paul.ockleford@edfenergy.com
 
-# What is installed?
-Below you will find a list of all the software, aliases and bash commandline tools that are installed when you run `setup.sh`, running `sync.sh` will only bring in new changes from git and then resource `.bashrc` so that your shell is updated with any new environment variables and aliases etc.
+## What is installed
+
+Below you will find a list of all the software, aliases and bash commandline tools that are installed when you run `setup.sh`, running `sync.sh` will only bring in new changes from git and then re-source `.bashrc` so that your shell is updated with any new environment variables and aliases etc.
 
 ## Development software
+
 * `python 3.8`
 * `Node 12.x`
 * `NPM 6`
@@ -40,6 +45,7 @@ Below you will find a list of all the software, aliases and bash commandline too
 * `Docker Compose 1.17`
 
 ## Bash Commandline Support
+
 * `aws-cli`
 * `software-properties-common`
 * `ca-certificates`
@@ -52,11 +58,13 @@ Below you will find a list of all the software, aliases and bash commandline too
 * `unzip`
 
 ## Shell Functions
+
 * `mcd()` - Make directory and enter it
 * `envup()` - Load a `.env` file into your shell session
 * `extract()` - Handle most common compression file extractions
 
 ## Aliases
+
 * `alias python="python3.8"`
 * `alias ..="cd .."`
 * `alias ...="cd ../.."`
@@ -70,8 +78,10 @@ Below you will find a list of all the software, aliases and bash commandline too
 * `alias mkdir="mkdir -p"`
 * `alias files="du -hs * | sort -rh"`
 * `alias path='echo $PATH | tr -s ":" "\n"'`
+* `alias c="clear"`
 
 ## Git
+
 Additional configuration is performed for git, `git-extras` is installed and git is aliased as `g` and when used alone runs `git status`, when used in conjunction with any other valid `git` command will execute the command.
 
 Autocomplete is set up for `g` and your current checked out git branch is added to your terminal prompt, e.g:
