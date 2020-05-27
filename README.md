@@ -1,4 +1,4 @@
-# wsl_bootstrap
+# Bootstrap Ubuntu 18.04
 
 Bootstrap ubuntu 18.04 under WSL for development, the scripts should be ran as your normal user and ***not as root!***
 
