@@ -29,3 +29,5 @@ alias path='echo $PATH | tr -s ":" "\n"'
 alias editbash="vi ~/.bashrc"
 
 alias awsume=". awsume"
+
+alias c="clear"
