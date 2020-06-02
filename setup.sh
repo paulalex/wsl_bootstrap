@@ -33,6 +33,9 @@ python3.8 -m pip install pre-commit
 echo "[INFO] Amending git config credential helper"
 git config --global credential.helper store
 
+echo "[INFO] Amending git config editor, use vim instead of nano"
+git config --global core.editor "vim"
+
 # Install awscli and boto3
 echo "[INFO] Installing awscli and boto3"
 python3.8 -m pip install awscli boto3
